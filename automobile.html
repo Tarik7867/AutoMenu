@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./automobile.css">
+</head>
+<body>
+        <div id="automobile_config" >
+            <form action="" method="post" enctype="multipart/form-data" id="form">
+                <input type="text" name="model_auto" id="model_auto" placeholder="Введіть модель авто" >
+                <select name="select_marka" id="select_marka">
+                    <option value="0">Марка не обране</option>
+                </select>
+                <input type="text" name="price_auto" id="price_auto" placeholder="Введіть ціну:">
+                <input type="text" name="odometr" id="odometr" placeholder="Введіть пробіг:">
+                
+                <textarea name="description" id="description" placeholder="Опис авто:"></textarea><br>
+                <input type="text" name="count" id="count" placeholder="Кількість:">
+                <input type="button" value="Обрати авто" id="add_auto" name="add_auto">
+                <input type="file" id="file_inp" name="file_inp">
+            </form>
+            </div>
+
+            <table  id="style_table">
+                <thead>
+                    <tr>
+                        <th>ID Марки</th>
+                        <th>Модель</th>
+                        <th>Пробіг</th>
+                        <th>Опис</th>
+                        <th>Кількість</th>
+                        <th>Фото</th>
+                        <th>Вартість</th>
+                        <th colspan="2">Управління</th>
+                </tr>
+                </thead> 
+                
+                <tbody id="show_automobile">
+                    
+                </tbody>
+               </table>
+
+
+            
+               
+               <div id="delete_info">
+                <h3 id="text_delete"></h3>
+                <form action="" method="post">
+                    <input type="radio" id="btn_one" name="del" value="YES" checked>Так
+                    <input type="radio" id="btn_two" name="del" value="No">НІ
+                    <input type="button" id="Submit" value="Підтвердити">
+                    <input type="hidden" name="car_id" id="car_id">
+                </form>
+           </div>
+
+           
+           <div id="change_info">
+            <h3 id="text_change"></h3>
+                <form action="" method="post" enctype="multipart/form-data" id="form_edit" name="form_edit">
+                    <p>Редагування авто</p>
+                    <h3>Відредагуйте назву моделі</h3>
+                    <input type="text" name="change_model" id="change_model" >
+                    <h3>змініть марку моделі</h3>
+                    <select name="change_select_model" id="change_select_model">
+                        <option value="0">Оберіть марку</option>
+                    </select>
+                    <h3>Змініть ціну</h3>
+                    <input type="text" name="change_price" id="change_price" >
+                    <h3>Змініть пробіг</h3>
+                    <input type="text" name="change_odometr" id="change_odometr" >
+                    <h3>Змініть опис</h3>
+                    <textarea name="change_description" id="change_description"></textarea>
+                    <h3>Змініть Кількість</h3>
+                    <input type="text" name="change_count" id="change_count" >
+                    <h3>Змініть фото</h3>
+                    <img id="id_image"  width="100%" name="id_image">
+                    <input type="file" name="file_inp_img" id="file_inp_img">
+                    <input type="button" name="edit" value="Редагувати" id="change_button" >
+                    <input type="hidden" id="change_car_id" name="change_car_id">
+                </form>
+           </div>
+
+            
+    <script src="/jquery.js"></script>
+    <script src="/jquery.idTabs.min.js"></script>
+    <script src="./automobile.js"></script>
+</body>
+</html>
